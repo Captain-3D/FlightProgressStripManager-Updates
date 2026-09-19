@@ -1,6 +1,6 @@
 {
-  "version": "V0.17.1",
+  "version": "0.17.1",
   "notes": "## Changelog\r\n- Adding versioning printouts to the headless server\r\n- Bumped the minimum required protocol version to 17\r\n  - Any protocol version lower than 17 is incompatible, and connections will be rejected.",
-  "url": "https://github.com/Captain-3D/FlightProgressStripManager-Updates/releases/download/V0.17.1/Captains_FlightProgressStripManager.exe",
+  "url": "https://github.com/Captain-3D/FlightProgressStripManager-Updates/releases/download/v0.17.1/Captains_FlightProgressStripManager.exe",
   "sha256": "0f557d50376612c6d5855d970caea8c7192b51606ecb271f33ab8166e333f705"
 }
