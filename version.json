@@ -1,6 +1,6 @@
 {
-  "version": "0.17.2",
-  "notes": "## Changelog\r\n- Organizing the logs and files in the temp directory",
-  "url": "https://github.com/Captain-3D/FlightProgressStripManager-Updates/releases/download/v0.17.2/Captains_FlightProgressStripManager.exe",
-  "sha256": "8af3a9f827c331dc9d1e878ee8aa441921eb76e2fb74a6a8b9ae1f9163cff524"
+  "version": "0.17.3",
+  "notes": "## Changelog\r\n\r\n- Fixed Marshall bearing being 180 off of Final Bearing, not BRC\r\n- Added modex to be displayed alongside callsign on controller overview\r\n- Added modex to be displayed alongside callsign on Strip Collapse dialog\r\n- Added audible alert on incoming transfer offer\r\n- Added status bar connection indicator\r\n- Fixed duplicate strip-move history entries when hosting\r\n- Fixed layout/profile names aren't filesystem-sanitized\r\n- Fixed autosave isn't crash-safe\r\n- Fixed saving a layout under an existing name silently overwrites it\r\n- Fixed closing the main window while hosting drops connected controllers with no warning",
+  "url": "https://github.com/Captain-3D/FlightProgressStripManager-Updates/releases/download/v0.17.3/Captains_FlightProgressStripManager.exe",
+  "sha256": "3299ada3bdf68b1959589fc1be79c1bb21774c3d41e31f0e0facc9e700fc5a08"
 }
