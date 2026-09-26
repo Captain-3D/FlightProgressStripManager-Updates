@@ -1,6 +1,6 @@
 {
-  "version": "0.17.3.1",
-  "notes": "## Changelog\r\n- HOTFIX: Crash on startup do to bad import of old layout types",
-  "url": "https://github.com/Captain-3D/FlightProgressStripManager-Updates/releases/download/v0.17.3.1/Captains_FlightProgressStripManager.exe",
-  "sha256": "7a0d212e7a6725c108ec9186d679fd61992a73306f4a1f0324845f22f0f2d63d"
+  "version": "0.17.3.2",
+  "notes": "## Changelog\r\n- HOTFIX: Fixed issue with open layout button not doing anything.",
+  "url": "https://github.com/Captain-3D/FlightProgressStripManager-Updates/releases/download/v0.17.3.2/Captains_FlightProgressStripManager.exe",
+  "sha256": "164eb817a76168f251ad90287c0e57312c5d078cd4047b5ab62f898b56677315"
 }
