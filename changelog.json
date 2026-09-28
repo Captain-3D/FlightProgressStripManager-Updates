@@ -1,1 +1,57 @@
-[]
+[
+  {
+    "version": "0.17.3.2",
+    "date": "2026-09-26",
+    "notes": "## Changelog\r\n- HOTFIX: Fixed issue with open layout button not doing anything."
+  },
+  {
+    "version": "0.17.3.1",
+    "date": "2026-09-26",
+    "notes": "## Changelog\r\n- HOTFIX: Crash on startup do to bad import of old layout types"
+  },
+  {
+    "version": "0.17.3",
+    "date": "2026-09-26",
+    "notes": "## Changelog\r\n\r\n- Fixed Marshall bearing being 180 off of Final Bearing, not BRC\r\n- Added modex to be displayed alongside callsign on controller overview\r\n- Added modex to be displayed alongside callsign on Strip Collapse dialog\r\n- Added audible alert on incoming transfer offer\r\n- Added status bar connection indicator\r\n- Fixed duplicate strip-move history entries when hosting\r\n- Fixed layout/profile names aren't filesystem-sanitized\r\n- Fixed autosave isn't crash-safe\r\n- Fixed saving a layout under an existing name silently overwrites it\r\n- Fixed closing the main window while hosting drops connected controllers with no warning"
+  },
+  {
+    "version": "0.17.2",
+    "date": "2026-09-19",
+    "notes": "## Changelog\r\n- Organizing the logs and files in the temp directory"
+  },
+  {
+    "version": "0.17.1",
+    "date": "2026-09-19",
+    "notes": "## Changelog\r\n- Adding versioning printouts to the headless server\r\n- Bumped the minimum required protocol version to 17\r\n  - Any protocol version lower than 17 is incompatible, and connections will be rejected."
+  },
+  {
+    "version": "0.17.0",
+    "date": "2026-09-19",
+    "notes": "## Changelog\r\n- Fixed collapse dialog crashes on strips with no callsign\r\n- Fixed a corrupt settings file stops the app from launching\r\n- Fixed edit strip dialog silently changes data\r\n- Fixed bulk add uppercases the aircraft type\r\n- Fixed any layout rebuild shows other controllers' strips\r\n- Fixed dragging down within a column lands one slot too far\r\n- Fixed host keeps stale widgets when a remote client deletes, breaks out or collapses a strip\r\n- Fixed editable combos on strips never commit typed text\r\n- Fixed zero-padded values lose padding after opening and closing an editor\r\n- Fixed column deletion is by name, and Split doesn't check for duplicate names\r\n- Fixed autosave doesn't contain any strips\r\n- Fixed keybind dialog: cancel doesn't revert changes\r\n- Fixed server and connect dialogs are recreated on every open\r\n- Fixed client reconnect counts each drop twice\r\n- Fixed typing an airfield ICAO overwrites other controllers' info blocks\r\n- Fixed Headless server can crash on exit\r\n- Fixed updater not actually installing the newest update.\r\n- Changed create column default keybind from \"C\" to \"T\"\r\n- Changed create carrier strip default keybind from \"\" to \"C\"\r\n- Added changelog notes to the dialog that prompts user that a new latest version is available"
+  },
+  {
+    "version": "0.16.5",
+    "date": "2026-09-16",
+    "notes": "## Changelog\r\n- Renamed the field \"Bort Number\" to \"Modex\" \r\n  - Any previous custom strip layout using \"Bort Numbers\" will need to be fixed to reflect the new name being \"Modex\"\r\n- Added new field \"Holding Hands\"\r\n  - Represents the strips wingmen, helpful for carrier operations\r\n  - A list containing other \"Modex\"'s\r\n  - Breaking out strips populates the \"Modex\" properly,\r\n  - Condensing strips populates \"Holding Hands\" properly\r\n- Edited Strip layout \"FAA_Styles\" to account for \"Modex\"\r\n- Edited Strip layout \"FAA_Styles\" to include \"Holding Hands\""
+  },
+  {
+    "version": "0.16.4",
+    "date": "2026-09-16",
+    "notes": "## Changelog\r\n- Potentially fixed issue with the updater not actually updating the application to the latest version."
+  },
+  {
+    "version": "0.16.3",
+    "date": "2026-09-12",
+    "notes": "## Changelog:\r\n- Fixed potential crash after reloading into session with existing strips.\r\n- Fixed issue of strips broken out not getting all data the root strip had.\r\n- Added aircraft type to carrier strip on FAA_Style preset\r\n- Added a preset for carrier board layout."
+  },
+  {
+    "version": "0.16.2",
+    "date": "2026-09-08",
+    "notes": "## Changelog:\r\n- Added a new updater function\r\n  - on startup will check the latest version here."
+  },
+  {
+    "version": "0.16.1",
+    "date": "2026-09-08",
+    "notes": "## Notes:\r\nFirst public release! _Technicality an old build as 0.16.2 will be the actual latest, but im adding the one before to test checking for latest and grabbing the proper version._\r\n\r\n## **Changelog:**\r\n- Fixed bug with controller overview getting out of sync due to transferred strips not properly signalling to the server.\r\n- Added a new dialog to allow for bulk importing/creating of strips.\r\n- Changed the field \"Aircraft Type\" to be a dropdown instead of a pure text edit line. \r\n  - Added a good chunk of flyable DCS fixed wing aircraft to the dropdown list."
+  }
+]
