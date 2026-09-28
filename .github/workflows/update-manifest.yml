@@ -29,19 +29,24 @@ jobs:
           SHA=$(sha256sum asset.exe | cut -d ' ' -f1)
           echo "sha256=$SHA" >> "$GITHUB_OUTPUT"
 
-      - name: Write version.json
+      - name: Write version.json and changelog.json
         env:
           VERSION: ${{ github.event.release.tag_name }}
           NOTES: ${{ github.event.release.body }}
+          DATE: ${{ github.event.release.published_at }}
           URL: "https://github.com/${{ github.repository }}/releases/download/${{ github.event.release.tag_name }}/Captains_FlightProgressStripManager.exe"
           SHA: ${{ steps.hash.outputs.sha256 }}
         run: |
           python3 - <<'EOF'
           import json, os
 
+          version = os.environ["VERSION"].lstrip("v")
+          notes = os.environ["NOTES"]
+
+          # --- version.json (latest release only, unchanged behaviour) ---
           manifest = {
-              "version": os.environ["VERSION"].lstrip("v"),
-              "notes": os.environ["NOTES"],
+              "version": version,
+              "notes": notes,
               "url": os.environ["URL"],
               "sha256": os.environ["SHA"],
           }
@@ -49,12 +54,33 @@ jobs:
           with open("version.json", "w", encoding="utf-8") as f:
               json.dump(manifest, f, indent=2)
               f.write("\n")
+
+          # --- changelog.json (full history, newest first) ---
+          entries = []
+          if os.path.exists("changelog.json"):
+              with open("changelog.json", encoding="utf-8") as f:
+                  entries = json.load(f)
+
+          new_entry = {
+              "version": version,
+              "date": os.environ["DATE"][:10],  # "2026-09-27T12:00:00Z" -> "2026-09-27"
+              "notes": notes,
+          }
+
+          # If this version is already logged (e.g. a release was re-published),
+          # replace it instead of adding a duplicate.
+          entries = [e for e in entries if str(e.get("version")) != version]
+          entries.insert(0, new_entry)
+
+          with open("changelog.json", "w", encoding="utf-8") as f:
+              json.dump(entries, f, indent=2, ensure_ascii=False)
+              f.write("\n")
           EOF
 
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add version.json
-          git diff --cached --quiet || git commit -m "Update version.json for ${{ github.event.release.tag_name }}"
+          git add version.json changelog.json
+          git diff --cached --quiet || git commit -m "Update version.json and changelog.json for ${{ github.event.release.tag_name }}"
           git push
