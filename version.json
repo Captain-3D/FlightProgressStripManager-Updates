@@ -1,6 +1,6 @@
 {
-  "version": "0.18.0",
-  "notes": "## Changelog\r\n### Added\r\n- Added blank Carrier layout template.\r\n- Added carrier layout template for Case 1 conditions.\r\n- Added carrier layout template for Case 3 conditions.\r\n\r\n### Fixed\r\n- Fixed update download can be truncated.\r\n- Fixed editing strip can raise KeyError if controller deletes or transfers strip.\r\n- Fixed breakout inserts strips in the wrong place with several controllers.\r\n- Fixed the host's cursor jumps to the end while typing in Notes and combos.\r\n- Fixed flash timer is never stopped or started after remote updates.\r\n- Fixed headless server banner can crash on non-UTF-8 output\r\n\r\n### Changed\r\n- Changed generate squawk to no longer produce emergency squawks (7500/7600/7700).\r\n- Reorganized menu layout options.\r\n- Completely reworked how server and client connections talk to each other.\r\n  - Added heartbeat for better accidental disconnect detection.\r\n  - Added better auto-reconnect logic.\r\n  - Added popup to indicate when you have unexpectedly disconnected\r\n  - Added better logic to try and recover state when a controller how unexpectedly disconnects, reconnects.\r\n- Changed logos for server and client.",
-  "url": "https://github.com/Captain-3D/FlightProgressStripManager-Updates/releases/download/v0.18.0/Captains_FlightProgressStripManager.exe",
-  "sha256": "403a8432527de6476d0c853a708cb19ba4b843142bae608c42888ade6a20b60a"
+  "version": "0.18.1",
+  "notes": "## Changelog\r\n### Fixed\r\n- Fixed exe file not actually getting replaced when using the updater.",
+  "url": "https://github.com/Captain-3D/FlightProgressStripManager-Updates/releases/download/v0.18.1/Captains_FlightProgressStripManager.exe",
+  "sha256": "f57b328f9865a760d84dda9790d0d5c81af7abbb40bea44cc4af16b0f5c36ddc"
 }
