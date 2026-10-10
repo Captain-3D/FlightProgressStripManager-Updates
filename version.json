@@ -1,6 +1,6 @@
 {
-  "version": "0.18.1",
-  "notes": "## Changelog\r\n### Fixed\r\n- Fixed exe file not actually getting replaced when using the updater.",
-  "url": "https://github.com/Captain-3D/FlightProgressStripManager-Updates/releases/download/v0.18.1/Captains_FlightProgressStripManager.exe",
-  "sha256": "f57b328f9865a760d84dda9790d0d5c81af7abbb40bea44cc4af16b0f5c36ddc"
+  "version": "0.18.2",
+  "notes": "## Changelog\r\n### Fixed\r\n- Fixed updater can loop forever and never relaunch.\r\n- Fixed layout picker can delete bundled presets.\r\n- Fixed Holding \"X\" bypasses the two-press delete check and spams strips.\r\n- Fixed  \"Esc\" closes the whole Strip Layout Editor.\r\n- Fixed reconnect loses offline edits and strips.\r\n- Fixed restore autosave scrambles the board and crashes on a bad file.\r\n- Fixed loading a layout silently wipes the board.\r\n- Fixed \u201cApply\u201d layout shares live objects with the editor.\r\n- Fixed updates install even when verification is skipped.\r\n- Fixed \u201cSet Default\u201d on a preset doesn\u2019t survive a restart in onefile builds.\r\n- Fixed Upper-casing fields is inconsistent.\r\n- Fixed \"bulk add\" inconsistencies.\r\n- Fixed breakout can hand out 7500/7600/7700 or duplicate squawks.\r\n- Fixed host beeps for transfers addressed to someone else.\r\n- Fixed disconnected client sockets are never freed.\r\n- Fixed two clients with the same controller name flap forever.\r\n- Fixed cancelling a connection attempt can still connect.\r\n- Fixed non-editable combo editors never close.\r\n- Fixed strip widgets can be left on screen after delete, breakout or collapse.\r\n- Fixed two info blocks with the same identifier don\u2019t sync locally.\r\n\r\n### Changed\r\n- Strips dropdown items font now sizes correctly.\r\n- General code cleanup.",
+  "url": "https://github.com/Captain-3D/FlightProgressStripManager-Updates/releases/download/v0.18.2/Captains_FlightProgressStripManager.exe",
+  "sha256": "685c2bdc248e0aa08ace555200d16ff480f8b50c7ba2e66b451fe7bcf1e08c78"
 }

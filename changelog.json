@@ -1,5 +1,10 @@
 [
   {
+    "version": "0.18.2",
+    "date": "2026-10-10",
+    "notes": "## Changelog\r\n### Fixed\r\n- Fixed updater can loop forever and never relaunch.\r\n- Fixed layout picker can delete bundled presets.\r\n- Fixed Holding \"X\" bypasses the two-press delete check and spams strips.\r\n- Fixed  \"Esc\" closes the whole Strip Layout Editor.\r\n- Fixed reconnect loses offline edits and strips.\r\n- Fixed restore autosave scrambles the board and crashes on a bad file.\r\n- Fixed loading a layout silently wipes the board.\r\n- Fixed “Apply” layout shares live objects with the editor.\r\n- Fixed updates install even when verification is skipped.\r\n- Fixed “Set Default” on a preset doesn’t survive a restart in onefile builds.\r\n- Fixed Upper-casing fields is inconsistent.\r\n- Fixed \"bulk add\" inconsistencies.\r\n- Fixed breakout can hand out 7500/7600/7700 or duplicate squawks.\r\n- Fixed host beeps for transfers addressed to someone else.\r\n- Fixed disconnected client sockets are never freed.\r\n- Fixed two clients with the same controller name flap forever.\r\n- Fixed cancelling a connection attempt can still connect.\r\n- Fixed non-editable combo editors never close.\r\n- Fixed strip widgets can be left on screen after delete, breakout or collapse.\r\n- Fixed two info blocks with the same identifier don’t sync locally.\r\n\r\n### Changed\r\n- Strips dropdown items font now sizes correctly.\r\n- General code cleanup."
+  },
+  {
     "version": "0.18.1",
     "date": "2026-10-04",
     "notes": "## Changelog\r\n### Fixed\r\n- Fixed exe file not actually getting replaced when using the updater."
