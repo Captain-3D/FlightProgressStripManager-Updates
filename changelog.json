@@ -1,5 +1,10 @@
 [
   {
+    "version": "0.18.4",
+    "date": "2026-11-07",
+    "notes": "## Changelog\r\n### Fixed\r\n- Fixed host stops syncing after a failed client connect.\r\n- Fixed strip moves use the wrong index.\r\n- Fixed deleting a column from a split loses its width.\r\n- Fixed a non-object JSON packet raises on every datagram with the DCS bridge.\r\n- Fixed combo doesn’t revert when a profile fails to load.\r\n- Fixed first connect attempt has no timeout.\r\n- Fixed every label gets a duplicate hidden border and background.\r\n- Fixed console commands may run on the stdin thread.\r\n- Fixed Client error text is overwritten immediately.\r\n- Fixed failed update can leave a corrupt exe.\r\n- Fixed server processes messages from clients that haven’t sent hello.\r\n- Fixed reconnectFailed is never emitted.\r\n- Fixed with no default layout, “New Strip” silently does nothing.\r\n- Fixed duplicate column name fails silently.\r\n- Fixed DCS weather updates wipe the frequency table mid-edit\r\n### Added\r\n- Added better custom-layout check.\r\n- Zero-padded numbers for all degree based values.\r\n- Added JSON write on crash to help save partial work.\r\n- Added cap to strip history (currently 200).\r\n- Added check to remove empty “Transfer Strip” submenu.\r\n- Added ability to close client server window without having to stop the server.\r\n- Added default \"Unassigned\" column for all use cases. No more blank boards.\r\n### Changed\r\n- Changed FPSMBridge.lua to better support a server not allowing export without the ability to have an export script running on the server.\r\n- Code cleanup for dead code.\r\n- Changed Fuel to be represented as a float now instead of an integer.\r\n  - Matches better with radio flow.\r\n- Changed Ghost strip on strip movement to be a bar.\r\n  - This will be better for visibility and easier understanding of placement. "
+  },
+  {
     "version": "0.18.3",
     "date": "2026-10-14",
     "notes": "## Changelog\r\n- "
